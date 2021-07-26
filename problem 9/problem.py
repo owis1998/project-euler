@@ -1,10 +1,9 @@
-isDone = False
-for a in range(10, 401):
-	for b in range(10, 401):
-		c = (a**2 + b**2)**0.5 
-		if c - int(c) == 0 and (a + b + c) == 1000:
-			print(int(a * b * c))
-			isDone = True
-
-	if isDone:
-		break
+for n in range(1, 50):
+	for m in range(n + 1, 51):
+		a = m*m - n*n
+		b = 2 * m * n
+		c = m**2 + n**2
+		if a + b + c == 1000:
+			print("a = {}, b = {}, c = {}".format(a, b, c))
+			print("a * b * c = {}".format(a*b*c))
+			quit()
